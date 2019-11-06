@@ -1,0 +1,32 @@
+name: assembly::vil_pcc_os::1.0
+description: Sterlite PCRF wrapper assembly
+properties:
+  lcm_assembly:
+    type: string
+  pcc_nets_assembly:
+    type: string
+  Gx_cidr:
+    description: The CIDR to be used for the subnet on network Gx
+    type: string
+
+
+
+  ## alm properties
+  deploymentLocation:
+    type: string
+    description: openstack project and cloud
+    default: ecson.rhosp
+  resourceManager:
+    type: string
+    default: defaultrm
+
+
+composition:
+  pcc1:
+    type: resource::str_pcc_os::1.0
+    properties:
+      deploymentLocation:
+        value: ${deploymentLocation}
+      resourceManager:
+        value: ${resourceManager}
+    quantity: 1

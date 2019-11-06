@@ -1,0 +1,13 @@
+name: "resource::str_pcc_os::1.0"
+description: Nokia TAS resource
+properties:
+## SOL003 instantiate
+  vnfd_flavor:
+    type: string
+    description: "vnfd flavour"
+  avzone:
+    type: string
+    description: "availability zone"
+  vm_image_id:
+
+  vol_image_id:
